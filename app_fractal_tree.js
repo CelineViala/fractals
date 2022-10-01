@@ -5,7 +5,7 @@ const app_fractal_tree = {
     stop: 0,
     id:null,
     draw_fractal(i) {
-        this.length=this.height_canvas/5;
+        this.length=this.width_canvas/8;
         background(0);
         translate(width / 2, height)
         // stroke(50, 250, 50)
@@ -33,8 +33,8 @@ const app_fractal_tree = {
         strokeWeight(2);
         stroke(random_color(255))
         if (lvl == 1) {
-            line(0, 0, 0, -len*2);
-            translate(0, -len*2)
+            line(0, 0, 0, -len*1.4);
+            translate(0, -len*1.4);
         } else {
             line(0, 0, 0, -len);
             translate(0, -len)
