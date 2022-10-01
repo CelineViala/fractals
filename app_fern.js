@@ -1,6 +1,6 @@
 const fern={
-    width_canvas: window.innerWidth / 1.5,
-    height_canvas: window.innerHeight / 1.25,
+    width_canvas: 1000,
+    height_canvas: 500,
     scale:110,
     x:0,
     y:0,
