@@ -68,12 +68,12 @@ height: 700px;
     vertical-align: middle;
 }
 .waitingMsg{
-    position: absolute;
+    /* position: absolute; */
     display:none;
-    top:15%;
+    /* top:15%; */
     color:#27ae60;
     font-size: large;
-    left:50%;
+    margin-top: 1em;
 }
 #newton-slider{
     display: none;
@@ -85,4 +85,25 @@ height: 700px;
 .label-slider{
     margin-bottom:2em;
     display: none;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    /* Styles pour cette Media Queries */
+    .btns{
+        height:200px;
+        overflow: auto;
+    }
+    .def{
+        font-size: small;
+        display: none;
+    }
+
+    .container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    canvas{
+        width:80% !important;
+        height:300px !important;
+    }
 }

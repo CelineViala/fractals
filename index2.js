@@ -26,8 +26,8 @@ function setup() {
     if(home)
     {
         stroke('#fff');
-        textSize(80);
-        text("cliquez sur un bouton",100,100);
+        textSize(app.width_canvas/22);
+        text("Cliquez sur un bouton",100,100);
         home=false;
     }
 
@@ -144,6 +144,7 @@ document.querySelector(".btn-fractal-tree").addEventListener("click", () => {
     app = app_fractal_tree;
     setup();
     choice='fractal-tree';
+    console.log(app.width_canvas);
     app_fractal_tree.stepByStep();
 })
 
