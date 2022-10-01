@@ -20,14 +20,14 @@ slider.addEventListener("change",()=>{
 })
 function setup() {
 
-    createCanvas(1000, 500);
+    createCanvas(app.width_canvas, app.height_canvas);
     noStroke();
     background(0);
     if(home)
     {
         stroke('#fff');
-        textSize(50);
-        text("Cliquez sur un bouton",50,50);
+        textSize(app.width_canvas/22);
+        text("Cliquez sur un bouton",app.width_canvas/22,app.width_canvas/22);
         home=false;
     }
 
