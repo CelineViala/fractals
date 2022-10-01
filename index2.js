@@ -27,7 +27,7 @@ function setup() {
     {
         stroke('#fff');
         textSize(app.width_canvas/22);
-        text("Cliquez sur un bouton",100,100);
+        text("Cliquez sur un bouton",app.width_canvas/22,app.width_canvas/22);
         home=false;
     }
 
