@@ -1,7 +1,7 @@
 const pythagore={
-    side:window.innerWidth/15,
-    width_canvas: window.innerWidth / 2,
-    height_canvas: window.innerHeight / 1.5,
+    side:1000/8,
+    width_canvas: 1000,
+    height_canvas: 600,
     build_tree(x1, y1, x2, y2, x3, y3, x4, y4, lvl, max) {
         if (lvl > max)
           return
