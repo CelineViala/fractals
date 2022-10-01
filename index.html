@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gpu.js/1.0.2/gpu.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.0.1/math.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/rx-cancellable/dist/index.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/rx-scheduler/dist/index.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fast-complex/dist/index.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js" defer></script>
+    <script src="app_fractal_tree.js" defer></script>
+    <script src="app_fern.js" defer></script>
+    <script src="app_pythagore.js" defer></script>
+    <script src="init_triangle.js" defer></script>
+    <script src="newton.js" defer></script>
+    <script src="app_levy.js" defer></script>
+    <script src="app_dragon.js" defer></script>
+
+    <script src="index2.js" defer></script>
+
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <header>
+        <h1>Générateur de fractales</h1>
+        <div class="def">
+        <p>Une figure fractale est un objet mathématique qui présente une structure similaire à toutes les échelles.
+
+            C'est un objet géométrique « infiniment morcelé » dont des détails sont observables à une échelle arbitrairement choisie. En zoomant sur une partie de la figure, il est possible de retrouver toute la figure ; on dit alors qu’elle est « auto similaire ».<span> Wikipédia</span></p>
+            
+            
+        </div>
+    </header>
+    <main class="container">
+
+        <div class="btns">
+            <button class="btn btn-tree">Arbre de Pythagore <span class="info">🛈</span></button>
+            <button class="btn btn-fractal-tree">Arbre fractal<span class="info">🛈</span></button>
+            <button class="btn btn-sierp">Triangle de Sierpiensky <span class="info">🛈</span></button>
+            <button class="btn btn-newton">Fractale de Newton <span class="info">🛈</span></button>
+            <input type="range" id="newton-slider" name="newton" min="3" max="10" value="3" step="1">
+            <label class="label-slider" for="newton">Degré du polynôme : <span class="input-val">3</span></label>
+            <button class="btn btn-fern">Fougère de Barnsley <span class="info">🛈</span></button>
+            <button class="btn btn-fern2">Fougère de Barnsley - 2 <span class="info">🛈</span></button>
+            <button class="btn btn-levy">Courbe de Levy<span class="info">🛈</span></button>
+            <button class="btn btn-dragon">Courbe du dragon<span class="info">🛈</span></button>
+        </div>
+        <div class="infos">
+            
+        
+        </div>
+
+        <p class="waitingMsg">Patientez quelques instants SVP...</p>
+    </main>
+  <footer> C.V. 2022 </footer>
+</body>
+
+</html>
