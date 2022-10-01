@@ -19,6 +19,7 @@ height: 700px;
 .btn{
     display: block;
     position:relative;
+   
     padding:0.3em ;
     font-size: 1em;
     border-radius: 5px;
@@ -37,8 +38,7 @@ height: 700px;
     flex-wrap: wrap;
 }
 .btns{
-    margin-top: 5%;
-    margin-left: 5%;
+    margin: 5%;    
     display: flex;
     flex-direction: column;   
 }
@@ -52,11 +52,11 @@ height: 700px;
     padding:0.3em ;  
     position: absolute;
     top :0px;
-    left:-30px;
-    font-size: 1em;
-    border-radius: 5px;
+    left:-40px;
+    pointer-events: none;
+    
     display: block;
-    margin-bottom:1em;
+    
     text-align: center;
     background-color: unset;
     border-color: transparent;
@@ -93,13 +93,19 @@ height: 700px;
         height:200px;
         overflow: auto;
     }
+
+    .btn{
+        width:80%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
     .def{
         font-size: small;
-        display: none;
+        
     }
 
     .container{
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: center;
     }
     canvas{

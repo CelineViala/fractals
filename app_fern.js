@@ -43,7 +43,9 @@ const fern={
     drawPoint() {
  
       strokeWeight(0.2);
+      
       //mise à l'échelle
+      
       if(fern.type=="fern1")
         fern.scale=fern.width_canvas/20
       else if(fern.type=="fern2")
