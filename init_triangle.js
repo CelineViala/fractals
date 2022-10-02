@@ -1,7 +1,7 @@
 const sierp = {
-  len: window.innerWidth / 4,
-  width_canvas: window.innerWidth / 2,
-  height_canvas: window.innerHeight / 1.5,
+  len: 350,
+  width_canvas: 1000,
+  height_canvas: 600,
   pressed: false,
   id_interval: null,
   color: 255,

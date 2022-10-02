@@ -1,7 +1,7 @@
 const app_fractal_tree = {
     length: 150,
-    width_canvas: window.innerWidth / 1.5,
-    height_canvas: window.innerHeight / 1.3,
+    width_canvas: 1000,
+    height_canvas: 600,
     stop: 0,
     id:null,
     draw_fractal(i) {
