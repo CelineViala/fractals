@@ -161,10 +161,7 @@ height: 700px;
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     /* Styles pour cette Media Queries */
-    .btns{
-        height:200px;
-        overflow: auto;
-    }
+    
 
     .btn{
         width:80%; 
