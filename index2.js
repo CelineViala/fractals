@@ -171,3 +171,45 @@ document.querySelector(".btn-dragon").addEventListener("click", () => {
     setup();
     choice = 'dragon';
 })
+
+//relating to modal
+var modal = document.querySelector("#myModal");
+var span = document.querySelector(".close");
+span.addEventListener("click",()=>{
+    modal.style.display = "none";
+})
+window.addEventListener("click",(e)=>{
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+      
+})
+
+const infoElms=document.querySelectorAll('.info');
+
+infoElms.forEach(item=>item.addEventListener("click",(e) =>{
+    e.stopPropagation();
+    modal.style.display = "block";  
+    }
+))
+
+const infoPythagoreElm=document.querySelector('.info-pythagore');
+const infoTreeElm=document.querySelector('.info-tree');
+
+const modalTitle=document.querySelector('.modal-title');
+const modalText=document.querySelector('.modal-text');
+const modalLink=document.querySelector('.modal-link');
+infoPythagoreElm.addEventListener("click", () => { 
+    modalTitle.textContent="Arbre de Pythagore";
+    modalText.textContent=" L'arbre de Pythagore est une fractale plane construite à l'aide de carrés. Elle porte le nom de Pythagore car chaque triplet de carrés en contact enclot un triangle rectangle, une configuration traditionnellement utilisée pour illustrer le théorème de Pythagore.";
+    modalLink.textContent="Wikipedia"
+    modalLink.setAttribute("href","https://fr.wikipedia.org/wiki/Arbre_de_Pythagore") 
+})
+
+infoTreeElm.addEventListener("click", () => {
+    modalTitle.textContent="Arbre fractal";
+    modalText.textContent="Un arbre est fractal en ce sens que ses branches maîtresses, issues du tronc, sont chacune des arbres en réduction."
+    modalLink.textContent="MathInfo"
+    modalLink.setAttribute("href","https://mathinfo.alwaysdata.net/2016/12/7-arbres-fractals/#:~:text=Un%20arbre%20est%20fractal%20en,et%20son%20angle%20(%20orientation%20).")
+
+})

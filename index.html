@@ -32,24 +32,38 @@
         <div class="def">
         <p>Une figure fractale est un objet mathématique qui présente une structure similaire à toutes les échelles.
 
-            C'est un objet géométrique « infiniment morcelé » dont des détails sont observables à une échelle arbitrairement choisie. En zoomant sur une partie de la figure, il est possible de retrouver toute la figure ; on dit alors qu’elle est « auto similaire ».<span> Wikipédia</span></p>
+            C'est un objet géométrique « infiniment morcelé » dont des détails sont observables à une échelle arbitrairement choisie. En zoomant sur une partie de la figure, il est possible de retrouver toute la figure ; on dit alors qu’elle est « auto similaire ». <a href="https://fr.wikipedia.org/wiki/Fractale" target="_blank">Wikipedia</a></p>
             
             
         </div>
     </header>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 class="modal-title"></h2>
+          </div>
+          <div class="modal-body">
+            <p class="modal-text"></p>
+            <a class="modal-link" href="#">Wikipedia</a>
+          </div>
+        </div>
+    </div>
     <main class="container">
         <div class="btns">
             
-            <button class="btn btn-tree">Arbre de Pythagore <span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span>
-            <button class="btn btn-fractal-tree">Arbre fractal<span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
-            <button class="btn btn-sierp">Triangle de Sierpiensky <span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
-            <button class="btn btn-newton">Fractale de Newton <span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
+            <button class="btn btn-tree">Arbre de Pythagore <span class="info info-pythagore"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/e_colorize:100/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span>
+            <button class="btn btn-fractal-tree">Arbre fractal<span class="info info-tree"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/e_colorize:100/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
+            <button class="btn btn-sierp">Triangle de Sierpiensky <span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/e_colorize:100/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
+            <button class="btn btn-newton">Fractale de Newton <span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/e_colorize:100/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
             <input type="range" id="newton-slider" name="newton" min="3" max="10" value="3" step="1">
             <label class="label-slider" for="newton">Degré du polynôme : <span class="input-val">3</span></label>
-            <button class="btn btn-fern">Fougère de Barnsley <span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
-            <button class="btn btn-fern2">Fougère de Barnsley - 2 <span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
-            <button class="btn btn-levy">Courbe de Levy<span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
-            <button class="btn btn-dragon">Courbe du dragon<span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
+            <button class="btn btn-fern">Fougère de Barnsley <span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/e_colorize:100/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
+            <button class="btn btn-fern2">Fougère de Barnsley - 2 <span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/e_colorize:100/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
+            <button class="btn btn-levy">Courbe de Levy<span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/e_colorize:100/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
+            <button class="btn btn-dragon">Courbe du dragon<span class="info"><img src="https://res.cloudinary.com/dhpiuysko/image/upload/e_colorize:100/v1664630846/information-logotype-in-a-circle_xfshgl.png" width="20px" alt=""></span></button>
         </div>
         <div class="infos">
             <p class="waitingMsg">Patientez quelques instants SVP...</p>
