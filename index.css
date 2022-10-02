@@ -3,6 +3,10 @@ html{
     color: #bdc3c7;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body{
+    min-height: 110vh;
+    position: relative;
+}
 a{
     color: #27ae60;
     text-decoration: none;
@@ -52,13 +56,13 @@ height: 700px;
 #footer{
     text-align: center;
     padding: 1em;
+    position: absolute;
+    bottom: 0;
     background-color:#bdc3c7;
     box-shadow: 8px 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     margin-top:2em;
+    width: 100%;
     color: #303952;
-    position: relative;
-    bottom: 0;
-    left:0;
 }
 .infos{
     margin-top: 5%;
