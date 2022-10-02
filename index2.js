@@ -19,7 +19,7 @@ slider.addEventListener("change",()=>{
     document.querySelector(".btn-newton").click();
 })
 function setup() {
-
+    pixelDensity(1);
     createCanvas(app.width_canvas, app.height_canvas);
     noStroke();
     background(0);
@@ -66,6 +66,39 @@ function draw() {
             app_dragon.drawPoint();
             app_dragon.nextPoint();
         }
+    }
+    if(choice=='newton'&& app.ok){
+        
+        console.log("test")
+        loadPixels();
+        for (let i = 0; i < app.width_canvas; i++) {
+            for (let j = 0; j < app.height_canvas; j++) {
+                let x = i;
+                let y = j;
+                x = map(x, 0, app.width_canvas, -1, 1)
+                y = map(y, 0, app.height_canvas, -1, 1);
+                let z = [x, y];
+                let color = app.getColor(z);
+                let xy=(i+j*600)*4;
+                app.points.push(createVector(i, j, color));
+                if(color!==0){
+                pixels[xy] = app.colors[color].levels[0];
+                pixels[xy + 1] = app.colors[color].levels[1];
+                pixels[xy + 2] = app.colors[color].levels[2];
+                pixels[xy + 3] = 255;}
+                else{
+                pixels[xy] = 0;
+                pixels[xy + 1] = 0;
+                pixels[xy + 2] = 0;
+                pixels[xy + 3] = 255;
+                }
+                
+            }
+            
+        }
+        updatePixels();
+        app.ok=false;
+        
     }
     
 
@@ -128,7 +161,6 @@ document.querySelector(".btn-newton").addEventListener("click", () => {
     document.querySelector("#newton-slider").style.display="block";
     document.querySelector(".label-slider").style.display="block";
     setTimeout(() => {
-
         app = newton;
         app.n=Number(val);
         choice = 'newton';

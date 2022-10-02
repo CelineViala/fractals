@@ -1,8 +1,9 @@
 const newton = {
-    width_canvas: 400,
-    height_canvas: 400,
+    width_canvas: 600,
+    height_canvas: 600,
     m: 1,
     n: 4,
+    ok:false,
     colors: [],
     roots: [],
     change:false,
@@ -49,6 +50,7 @@ const newton = {
         }
     },
     drawPoints() {
+        loadPixels();
         for (let i = 0; i < this.width_canvas; i++) {
             for (let j = 0; j < this.height_canvas; j++) {
                 let x = i;
@@ -57,9 +59,35 @@ const newton = {
                 y = map(y, 0, this.height_canvas, -1, 1);
                 let z = [x, y];
                 let color = this.getColor(z);
-                this.points.push(createVector(i, j, color));
+                let xy=(i*j*400)*4;
+                
+                if(color>0){
+                pixels[xy] = this.colors[color].levels[0];
+                pixels[xy + 1] = this.colors[color].levels[1];
+                pixels[xy + 2] = this.colors[color].levels[2];
+                pixels[xy + 3] = 255;}
+                else{
+                pixels[xy] = 0;
+                pixels[xy + 1] = 0;
+                pixels[xy + 2] = 0;
+                pixels[xy + 3] = 255;
+                }
             }
+            
         }
+        updatePixels();
+        this.ok=false;
+        // for (let i = 0; i < this.width_canvas; i++) {
+        //     for (let j = 0; j < this.height_canvas; j++) {
+        //         let x = i;
+        //         let y = j;
+        //         x = map(x, 0, this.width_canvas, -1, 1)
+        //         y = map(y, 0, this.height_canvas, -1, 1);
+        //         let z = [x, y];
+        //         let color = this.getColor(z);
+        //         this.points.push(createVector(i, j, color));
+        //     }
+        // }
     },
     init() {
         this.roots=[];
@@ -82,23 +110,27 @@ const newton = {
             });
         }
         console.log(this.roots)
+        
         if(this.points.length===0)
         {    
-            this.drawPoints();
+            this.ok=true;
+           
         }
         if(this.change)
         {    
             this.points=[];
             this.change=false;
-            this.drawPoints();
+            this.ok=true;
+        }else{
+            for (let i = 0; i < this.points.length; i++) {
+                stroke(this.colors[this.points[i].z]);
+                rect(this.points[i].x, this.points[i].y, 1, 1);
+            }
         }
-        // drawPoints in the canvas
+        // // drawPoints in the canvas
         const msgElm=document.querySelector('.waitingMsg');
     msgElm.style.display='none';
-        for (let i = 0; i < this.points.length; i++) {
-            stroke(this.colors[this.points[i].z]);
-            rect(this.points[i].x, this.points[i].y, 1, 1);
-        }
+        
     }
 
 }
