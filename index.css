@@ -121,7 +121,6 @@ height: 700px;
     position: relative;
     background-color: #D8DED1;
     margin: auto;
-    text-align: justify;
     padding: 1em;
     border: 1px solid #888;
     width: 70%;
@@ -133,7 +132,9 @@ height: 700px;
     animation-name: animatetop;
     animation-duration: 0.4s
   }
-  
+  .modal-text{
+    text-align: justify;
+  }
   /* Add Animation */
   @-webkit-keyframes animatetop {
     from {top:-300px; opacity:0} 
