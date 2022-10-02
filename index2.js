@@ -118,6 +118,7 @@ document.querySelector(".btn-fern2").addEventListener("click", () => {
 
 })
 document.querySelector(".btn-newton").addEventListener("click", () => {
+    
     app_fractal_tree.stopAnim();
     const msgElm = document.querySelector('.waitingMsg');
     msgElm.style.display = 'block';

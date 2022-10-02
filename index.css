@@ -111,8 +111,8 @@ height: 700px;
         justify-content: center;
     }
     canvas{
-        width:80% !important;
-        
+        width:80vw !important;
+        height:80vw !important;
     }
 }
 
