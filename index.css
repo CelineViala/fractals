@@ -148,7 +148,9 @@ height: 700px;
   /* The Close Button */
   .close {
    
-    float: right;
+    position: absolute;
+    top:0;
+    right:10px;
     font-size: 28px;
     font-weight: bold;
   }
