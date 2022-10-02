@@ -84,6 +84,7 @@ height: 700px;
 .waitingMsg{
     /* position: absolute; */
     display:none;
+    text-align: center;
     /* top:15%; */
     color:#27ae60;
     font-size: large;
