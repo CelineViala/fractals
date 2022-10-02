@@ -26,7 +26,7 @@ height: 700px;
 .btn{
     display: block;
     position:relative;
-    width:300px;
+    width:200px;
     padding:0.3em ;
     font-size: 1em;
     border-radius: 5px;
@@ -56,6 +56,9 @@ height: 700px;
     box-shadow: 8px 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     margin-top:2em;
     color: #303952;
+    position: relative;
+    bottom: 0;
+    left:0;
 }
 .infos{
     margin-top: 5%;
