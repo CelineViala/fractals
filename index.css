@@ -5,6 +5,7 @@ html{
 }
 a{
     color: #27ae60;
+    text-decoration: none;
 }
 h1{
     margin-left:5%;
@@ -21,6 +22,7 @@ margin-top: 5%;
 height: 700px;
 
 }
+
 .btn{
     display: block;
     position:relative;
@@ -47,7 +49,14 @@ height: 700px;
     display: flex;
     flex-direction: column;   
 }
-
+#footer{
+    text-align: center;
+    padding: 1em;
+    background-color:#bdc3c7;
+    box-shadow: 8px 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top:2em;
+    color: #303952;
+}
 .infos{
     margin-top: 5%;
     margin-left: 2%;
@@ -102,6 +111,7 @@ height: 700px;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
+    color:#303952;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
@@ -112,7 +122,7 @@ height: 700px;
     background-color: #D8DED1;
     margin: auto;
     text-align: justify;
-    padding: 3em;
+    padding: 1em;
     border: 1px solid #888;
     width: 70%;
   line-height: 1.5;
@@ -137,7 +147,7 @@ height: 700px;
   
   /* The Close Button */
   .close {
-    color: #344C11;
+   
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -153,7 +163,7 @@ height: 700px;
   .modal-header {
     padding: 2px 16px;
     
-    color: #344C11
+    
   }
   
   .modal-body {padding: 2px 16px;}
