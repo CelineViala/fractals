@@ -227,6 +227,10 @@ infoElms.forEach(item=>item.addEventListener("click",(e) =>{
 
 const infoPythagoreElm=document.querySelector('.info-pythagore');
 const infoTreeElm=document.querySelector('.info-tree');
+const infoSierpElm=document.querySelector('.info-sierp');
+const infoNewtonElm=document.querySelector('.info-newton');
+const infoBarnsleyElm=document.querySelectorAll('.info-barnsley');
+const infoDragonElm=document.querySelector('.info-dragon');
 
 const modalTitle=document.querySelector('.modal-title');
 const modalText=document.querySelector('.modal-text');
@@ -234,14 +238,40 @@ const modalLink=document.querySelector('.modal-link');
 infoPythagoreElm.addEventListener("click", () => { 
     modalTitle.textContent="Arbre de Pythagore";
     modalText.textContent=" L'arbre de Pythagore est une fractale plane construite à l'aide de carrés. Elle porte le nom de Pythagore car chaque triplet de carrés en contact enclot un triangle rectangle, une configuration traditionnellement utilisée pour illustrer le théorème de Pythagore.";
-    modalLink.textContent="Wikipedia"
+    modalLink.textContent="Voir + sur Wikipedia"
     modalLink.setAttribute("href","https://fr.wikipedia.org/wiki/Arbre_de_Pythagore") 
 })
 
 infoTreeElm.addEventListener("click", () => {
     modalTitle.textContent="Arbre fractal";
     modalText.textContent="Un arbre est fractal en ce sens que ses branches maîtresses, issues du tronc, sont chacune des arbres en réduction."
-    modalLink.textContent="MathInfo"
+    modalLink.textContent="Voir + sur MathInfo"
     modalLink.setAttribute("href","https://mathinfo.alwaysdata.net/2016/12/7-arbres-fractals/#:~:text=Un%20arbre%20est%20fractal%20en,et%20son%20angle%20(%20orientation%20).")
 
+})
+
+infoSierpElm.addEventListener("click",()=>{
+    modalTitle.textContent="Triangle de Sierpinski";
+    modalText.textContent="Il peut s'obtenir à partir d'un triangle « plein », par une infinité de répétitions consistant à diviser par deux la taille du triangle puis à les accoler en trois exemplaires par leurs sommets pour former un nouveau triangle. À chaque répétition le triangle est donc de même taille, mais « de moins en moins plein »."
+    modalLink.textContent="Wikipedia"
+    modalLink.setAttribute("href","https://fr.wikipedia.org/wiki/Triangle_de_Sierpi%C5%84ski")
+})
+infoNewtonElm.addEventListener("click",()=>{
+    modalTitle.textContent="Fractale de Newton";
+    modalText.textContent="La fractale de Newton est un ensemble frontière défini dans le plan complexe caractérisé par l’application de la méthode de Newton à un polynôme p(z)."
+    modalLink.textContent="Voir + sur Wikipedia"
+    modalLink.setAttribute("href","https://fr.wikipedia.org/wiki/Fractale_de_Newton")
+})
+
+infoBarnsleyElm.forEach(item=>item.addEventListener("click",()=>{
+    modalTitle.textContent="Fougère de Barnsley";
+    modalText.textContent="La fougère de Barnsley est une fractale nommée d'après le mathématicien Michael Barnsley qui l'a décrite pour la première fois dans son livre Fractals Everywhere."
+    modalLink.textContent="Voir + sur Wikipedia"
+    modalLink.setAttribute("href","https://fr.wikipedia.org/wiki/Foug%C3%A8re_de_Barnsley")
+}))
+infoDragonElm.addEventListener("click",()=>{
+    modalTitle.textContent="Courbe du dragon";
+    modalText.textContent="La courbe du dragon (ou « fractale du dragon » ou « courbe de Heighway » ou « dragon de Heighway ») a été pour la première fois étudiée par les physiciens de la NASA John Heighway, Bruce Banks, et William Harter. Elle a été décrite par Martin Gardner dans sa chronique de jeux mathématiques du Scientific American en 1967. Nombre de ses propriétés ont été publiées par Chandler Davis (en) et Donald Knuth. Elle est apparue dans le roman Jurassic Park de Michael Crichton."
+    modalLink.textContent="Voir + sur Wikipedia"
+    modalLink.setAttribute("href","https://fr.wikipedia.org/wiki/Courbe_du_dragon")
 })
