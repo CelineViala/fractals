@@ -128,8 +128,11 @@ const newton = {
             }
         }
         // // drawPoints in the canvas
-        const msgElm=document.querySelector('.waitingMsg');
-    msgElm.style.display='none';
+        setTimeout(() => {
+            const msgElm=document.querySelector('.waitingMsg');
+            msgElm.style.display='none'; 
+        }, 2000);
+        
         
     }
 
