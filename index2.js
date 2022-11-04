@@ -13,12 +13,14 @@ let slider=document.querySelector('#newton-slider');
 let labelSliderElm=document.querySelector('.label-slider');
 let spanValElm=document.querySelector('.input-val');
 let home=true;
+let ct = 0
 slider.addEventListener("change",()=>{
     newton.change=true;
     spanValElm.textContent=slider.value;
     document.querySelector(".btn-newton").click();
 })
 function setup() {
+    ct=0;
     pixelDensity(1);
     createCanvas(app.width_canvas, app.height_canvas);
     noStroke();
@@ -33,14 +35,14 @@ function setup() {
 
 }
 
-let ct = 0
+
 function hideNewtonSlider(){
     slider.style.display="none";
     labelSliderElm.style.display ="none";
     
 }
 function draw() {
-    if (choice == 'fern' && ct < 1e4) {
+    if (choice == 'fern' && ct < 1e3) {
         translate(fern.width_canvas / 3, fern.height_canvas - (0.18 * fern.height_canvas));
         rotate(180)
         ct++;
