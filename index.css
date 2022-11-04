@@ -3,6 +3,7 @@ html{
     color: #bdc3c7;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body{
     min-height: 110vh;
     position: relative;
@@ -47,6 +48,7 @@ height: 700px;
 .container{
     display: flex;
     flex-wrap: wrap;
+    min-height: 100vh;
 }
 .btns{
     margin: 5%;    
@@ -181,7 +183,7 @@ height: 700px;
   
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    /* Styles pour cette Media Queries */
+    
     
 
     .btn{
