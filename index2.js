@@ -233,6 +233,7 @@ const infoSierpElm=document.querySelector('.info-sierp');
 const infoNewtonElm=document.querySelector('.info-newton');
 const infoBarnsleyElm=document.querySelectorAll('.info-barnsley');
 const infoDragonElm=document.querySelector('.info-dragon');
+const infoLevyElm=document.querySelector('.info-levy');
 
 const modalTitle=document.querySelector('.modal-title');
 const modalText=document.querySelector('.modal-text');
@@ -276,4 +277,10 @@ infoDragonElm.addEventListener("click",()=>{
     modalText.textContent="La courbe du dragon (ou « fractale du dragon » ou « courbe de Heighway » ou « dragon de Heighway ») a été pour la première fois étudiée par les physiciens de la NASA John Heighway, Bruce Banks, et William Harter. Elle a été décrite par Martin Gardner dans sa chronique de jeux mathématiques du Scientific American en 1967. Nombre de ses propriétés ont été publiées par Chandler Davis (en) et Donald Knuth. Elle est apparue dans le roman Jurassic Park de Michael Crichton."
     modalLink.textContent="Voir + sur Wikipedia"
     modalLink.setAttribute("href","https://fr.wikipedia.org/wiki/Courbe_du_dragon")
+})
+infoLevyElm.addEventListener("click",()=>{
+    modalTitle.textContent="Courbe de Levy";
+    modalText.textContent="Décrite pour la première fois par Ernesto Cesàro en 1961 et Georg Faber en 1912, elle porte maintenant le nom du mathématicien français Paul Lévy qui, en 1938, a été le premier à décrire ses propriétés d'auto-similarité, et à en apporter une construction géométrique."
+    modalLink.textContent="Voir + sur Wikipedia"
+    modalLink.setAttribute("href","https://fr.wikipedia.org/wiki/Courbe_de_L%C3%A9vy")
 })
