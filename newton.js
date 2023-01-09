@@ -50,6 +50,7 @@ const newton = {
         }
     },
     drawPoints() {
+        
         loadPixels();
         for (let i = 0; i < this.width_canvas; i++) {
             for (let j = 0; j < this.height_canvas; j++) {
@@ -90,6 +91,7 @@ const newton = {
         // }
     },
     init() {
+        
         this.roots=[];
         this.colors=[];
         this.colors[0] = 0

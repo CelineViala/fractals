@@ -70,9 +70,8 @@ function draw() {
         }
     }
     if(choice=='newton'&& app.ok){
-        
-        console.log("test")
         loadPixels();
+        
         for (let i = 0; i < app.width_canvas; i++) {
             for (let j = 0; j < app.height_canvas; j++) {
                 let x = i;
@@ -81,7 +80,7 @@ function draw() {
                 y = map(y, 0, app.height_canvas, -1, 1);
                 let z = [x, y];
                 let color = app.getColor(z);
-                let xy=(i+j*600)*4;
+                let xy=(i+j*app.width_canvas)*4;
                 app.points.push(createVector(i, j, color));
                 if(color!==0){
                 pixels[xy] = app.colors[color].levels[0];
@@ -165,6 +164,10 @@ document.querySelector(".btn-newton").addEventListener("click", () => {
     setTimeout(() => {
         app = newton;
         app.n=Number(val);
+        if(screen.width<500){
+            app.width_canvas=400;
+            app.height_canvas=400;
+            console.log(app.width_canvas)}
         choice = 'newton';
         setup();
         sierp.init();
