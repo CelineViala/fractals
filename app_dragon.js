@@ -25,31 +25,31 @@ const app_dragon = {
         let newPoint;
         if(r<0.5)
         {    
-            app_dragon.color="red";
-            newPoint=this.f(app_dragon.x,app_dragon.y);
+            this.color="red";
+            newPoint=this.f(this.x,this.y);
         }
         else
         {    
-            app_dragon.color="fff";
-            newPoint=this.f_prime(app_dragon.x,app_dragon.y); 
+            this.color="fff";
+            newPoint=this.f_prime(this.x,this.y); 
         }
-        app_dragon.newX=newPoint[0];
-        app_dragon.newY=newPoint[1];
+        this.newX=newPoint[0];
+        this.newY=newPoint[1];
     },
     drawPoint() {
  
         strokeWeight(0.5);
         //mise à l'échelle
-        stroke(app_dragon.color);
-        let px = app_dragon.x*app_dragon.scale
-        let py = app_dragon.y*app_dragon.scale
+        stroke(this.color);
+        let px = this.x*this.scale
+        let py = this.y*this.scale
         point(px, py);
     },
     nextPoint() {
         let r = random(1);
-        app_dragon.compute(r);
-        app_dragon.x = app_dragon.newX;
-        app_dragon.y = app_dragon.newY;
+        this.compute(r);
+        this.x = this.newX;
+        this.y = this.newY;
       },
 
 }

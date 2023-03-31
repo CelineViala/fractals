@@ -21,31 +21,31 @@ const app_levy = {
         let newPoint;
         if(r<0.5)
         {    
-            //app_levy.color=random_color(255);
-            newPoint=this.f(app_levy.x,app_levy.y);
+            //this.color=random_color(255);
+            newPoint=this.f(this.x,this.y);
         }
         else
         {    
-            //app_levy.color=random_color(255);
-            newPoint=this.f_prime(app_levy.x,app_levy.y); 
+            //this.color=random_color(255);
+            newPoint=this.f_prime(this.x,this.y); 
         }
-        app_levy.newX=newPoint[0];
-        app_levy.newY=newPoint[1];
+        this.newX=newPoint[0];
+        this.newY=newPoint[1];
     },
     drawPoint() {
  
         strokeWeight(2);
         //mise à l'échelle
-        stroke(app_levy.color);
-        let px = app_levy.x*app_levy.scale
-        let py = app_levy.y*app_levy.scale
+        stroke(this.color);
+        let px = this.x*this.scale
+        let py = this.y*this.scale
         point(px, py);
     },
     nextPoint() {
         let r = random(1);
-        app_levy.compute(r);
-        app_levy.x = app_levy.newX;
-        app_levy.y = app_levy.newY;
+        this.compute(r);
+        this.x = this.newX;
+        this.y = this.newY;
       },
 
 }

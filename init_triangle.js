@@ -8,40 +8,40 @@ const sierp = {
   cnt: 1,
   draw_sierpinski() {
     background(0);
-    sierp.color=random_color(255);
-    if (sierp.pressed) {
-      sierp.sierpinski(sierp.width_canvas / 2 - sierp.len / 2, sierp.height_canvas / 2 + sierp.len * sqrt(3) / 4, sierp.len, 1, sierp.cnt);
+    this.color=random_color(255);
+    if (this.pressed) {
+      this.sierpinski(this.width_canvas / 2 - this.len / 2, this.height_canvas / 2 + this.len * sqrt(3) / 4, this.len, 1, this.cnt);
     }
   },
   draw_triangle(x, y, l) {
-    fill(sierp.color);
+    fill(this.color);
     triangle(x, y, x + l / 2, y - l * Math.cos(Math.PI / 6), x + l, y);
   },
   stepByStep(iter) {
-    sierp.pressed = true;
-    sierp.count = 1;
+    this.pressed = true;
+    this.count = 1;
     setup()
-    sierp.draw_sierpinski()
-    sierp.id_interval = setInterval(() => {
-      if (sierp.cnt < iter)
-        sierp.cnt++;
-      sierp.draw_sierpinski()
+    this.draw_sierpinski()
+    this.id_interval = setInterval(() => {
+      if (this.cnt < iter)
+        this.cnt++;
+      this.draw_sierpinski()
 
     }, 1000);
   },
   sierpinski(x, y, l, iter, max) {
     if (iter == max) {
-      sierp.draw_triangle(x, y, l);
+      this.draw_triangle(x, y, l);
     } else {
-      sierp.sierpinski(x, y, l / 2, iter + 1, max);
-      sierp.sierpinski(x + l / 2, y, l / 2, iter + 1, max);
-      sierp.sierpinski(x + l / 4, y - l * sqrt(3) / 4, l / 2, iter + 1, max);
+      this.sierpinski(x, y, l / 2, iter + 1, max);
+      this.sierpinski(x + l / 2, y, l / 2, iter + 1, max);
+      this.sierpinski(x + l / 4, y - l * sqrt(3) / 4, l / 2, iter + 1, max);
     }
   },
   init() {
     setup()
-    sierp.cnt = 1,
-      sierp.pressed = false
-    clearInterval(sierp.id_interval);
+    this.cnt = 1,
+      this.pressed = false
+    clearInterval(this.id_interval);
   }
 }
